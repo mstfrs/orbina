@@ -14,9 +14,11 @@ export default function Home() {
   const [selectedCity, setSelectedCity] = useState("");
 
   useEffect(() => {
-    const storedApiKey = sessionStorage.getItem("apiKey");
-    if (storedApiKey) {
-      setApiKey(storedApiKey);
+    if (typeof window !== 'undefined') {
+      const storedApiKey = sessionStorage.getItem('apiKey');
+      if (storedApiKey) {
+        setApiKey(storedApiKey);
+      }
     }
   }, [setApiKey]);
 
