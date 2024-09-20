@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+●	WeatherApp Case Study
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Project Skeleton ](#project-skeleton)
+  - [Links](#links)
+  - [Built with](#built-with)
+  - [Installation](#Installation)  
+  - [Author](#author)
+
+## The challenge
+
+Hello. I used NextJs, Tailwind CSS, Zustand, React Query, HeadlessUI, Toastify, axios technologies in the project.
+
+The project consists of 2 pages. On the first page, we log in to the application with the API Key you can obtain from openweathermap.org.
+
+After logging in successfully, we are greeted by a page consisting of 2 tabs. You can see current weather information by choosing from the cities in the dropdown in the first tab and by selecting from the opened map in the second tab.
+
+Weather information includes current temperature, humidity, wind, lowest temperature and highest temperature information.
+
+By using sessionStorage, a structure was built that does not require the API key again when the browser is closed or a new tab is opened, and when the page is refreshed, this is not required.
+
+After the application was completed, it was deployed on Vercel.
+
+
+## Project Skeleton
+
 ```
+●	WeatherApp Case Study
+|
+|----readme.md       
+SOLUTION
+├── public
+│    ├── marker-icon.png
+│    ├── marker-shadow.png
+│    ├── components
+│    ├── images
+│           ├── bgcloud.jpg
+│           ├── cold.png
+│           ├── hot.png
+│           ├── humidity.png
+│           ├── Orbina.png
+│           ├── wind.png
+├── app
+│    ├── components
+│    │       ├── CitySelector.js
+│    │       ├── Loading.js
+│    │       ├── LoginForm.js
+│    │       ├── Map.js
+│    │       ├── WeatherApp.js
+│    │       ├── WeatherDisplay.js
+│    │       ├── WeatherInfo.js
+│    ├── data
+│    │       ├── cities.json
+│    ├── lib
+│    │       ├── axios.js
+│    ├── services
+│    │       ├── weatherService.js
+│    ├── store
+│    │       ├── store.js
+│    ├── utils
+│    │       ├── api.js
+│    │       ├── classNames.js
+│    ├── .env.sample.local
+│    ├── layout.js
+│    ├── page.js
+│    └── global.css
+├── package.json
+└── tailwind.config.js
+```
+## Screenshot
+<p align="left">
+<img src="3.gif" alt="screenshot" >
+<img src="1.jpg.gif" alt="screenshot" >
+<img src="2.jpg.gif" alt="screenshot" >
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Links
+<hr>
+<b>Check The Live Website ➡️</b> <a href="https://orbina-mstfrs-projects.vercel.app/"> Live Website </a> 
+<hr>
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Built with
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `NextJs`
+- `Zustand`
+- `Axios`
+- `React Query`
+- `Toastify`
+- `HeadlessUI`
+- `Leaflet JS`
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone this project:
 
-## Deploy on Vercel
+   ```bash
+     Clone the project: https://github.com/mstfrs/orbina.git
+   ```
+2. Change .env.sample.local to .env.local
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+ 
+3. Install the necessary dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```bash
+   npm install / yarn
+   ```
+
+## Usage
+
+1. Start the application:
+
+   ```bash
+   npm run start / yarn start
+   ```
+2. Open your web browser and go to [http://localhost:3000/](http://localhost:3000)
+
+## Author
+
+- Author - Mustafa ÖRS
+
+<center> &#8987; Happy Coding  &#9997; </center>
