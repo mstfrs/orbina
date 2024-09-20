@@ -14,7 +14,7 @@ export default function CitySelector({ onSelectCity }) {
   };
 
   return (
-    <div className="w-full max-w-sm mx-auto mt-8">
+    <div className="w-full max-w-sm mx-auto mt-8 ">
       <Listbox value={selectedCity} onChange={handleSelect}>
         {({ open }) => (
           <>
@@ -22,11 +22,11 @@ export default function CitySelector({ onSelectCity }) {
             <div className="relative">
             
               <ListboxButton
-                className="block w-full bg-white border border-gray-300 rounded-lg py-2 pl-3 pr-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 text-2xl"
+                className="block w-full bg-gray-300 border border-blue-800 rounded-lg py-2 pl-3 pr-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 md:text-xl"
               >
                 {selectedCity || 'Şehir seçin'}
               </ListboxButton>
-              <ListboxOptions className=" absolute mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg z-10 max-h-60 overflow-y-auto text-2xl">
+              <ListboxOptions className=" absolute mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg z-10 max-h-60 overflow-y-auto md:text-xl">
               <CheckIcon className="invisible size-5 group-data-[selected]:visible" />
                 {cities.map((city) => (
                   <ListboxOption
