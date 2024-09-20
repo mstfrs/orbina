@@ -74,8 +74,8 @@ SOLUTION
 ## Screenshot
 <p align="left">
 <img src="3.gif" alt="screenshot" >
-<img src="1.jpg.gif" alt="screenshot" >
-<img src="2.jpg.gif" alt="screenshot" >
+<img src="1.jpg" alt="screenshot" >
+<img src="2.jpg" alt="screenshot" >
 </p>
 
 ## Links
