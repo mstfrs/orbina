@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { useApiKeyStore } from "../store";
+import { useApiKeyStore } from "../store/store";
 import { fetchWeatherByCity } from "../services/weatherServices";
 import Loading from "./Loading";
 import WeatherInfo from "./WeatherInfo";

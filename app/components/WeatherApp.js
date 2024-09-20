@@ -1,10 +1,15 @@
 // components/WeatherApp.tsx
 "use client";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
-import Map from "./Map";
+// import Map from "./Map";
 import classNames from "../utils/classNames";
 import WeatherDisplay from "./WeatherDisplay";
 import CitySelector from "./CitySelector";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("./Map"), {
+  ssr: false,
+});
 
 export default function WeatherApp({  selectedCity, setSelectedCity }) {
   return (

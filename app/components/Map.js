@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaf
 import "leaflet/dist/leaflet.css";
 import { useQuery } from "@tanstack/react-query";
 import { fetchWeatherByCoordinates } from "../services/weatherServices";
-import { useApiKeyStore } from "../store";
+import { useApiKeyStore } from "../store/store";
 import WeatherInfo from "./WeatherInfo";
 import Loading from "./Loading";
 

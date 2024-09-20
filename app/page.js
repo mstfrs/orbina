@@ -2,19 +2,20 @@
 
 import { useEffect, useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useApiKeyStore } from "./store";
+import { useApiKeyStore } from "./store/store";
 import WeatherApp from "./components/WeatherApp";
 import LoginForm from "./components/LoginForm";
-import Image from "next/image";
+
 
 const queryClient = new QueryClient();
+
 
 export default function Home() {
   const { apiKey, setApiKey } = useApiKeyStore();
   const [selectedCity, setSelectedCity] = useState("");
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (global?.window !== 'undefined') {
       const storedApiKey = sessionStorage.getItem('apiKey');
       if (storedApiKey) {
         setApiKey(storedApiKey);
